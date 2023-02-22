@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="bootstrap" template="/WEB-INF/views/tiles/bootstrap/layout/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/bootstrap/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/bootstrap/layout/footer.jsp" />
+	</definition>
+	
+	<definition name="/bootstrap/index" extends="bootstrap">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/bootstrap/contents/index.jsp"/>
+		<put-attribute name="title" value="main"/>
+	</definition>
+	
+	<definition name="/bootstrap/blog" extends="bootstrap">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/bootstrap/contents/blog.jsp"/>
+		<put-attribute name="title" value="blog"/>
+	</definition>
+	
+	<definition name="a" extends="bootstrap">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/bootstrap/contents/shop.jsp"/>
+		<put-attribute name="title" value="shop"/>
+	</definition>
+	
+	<definition name="/contact" extends="bootstrap">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/bootstrap/contents/contact.jsp"/>
+		<put-attribute name="title" value="contact"/>
+	</definition>
+</tiles-definitions>
